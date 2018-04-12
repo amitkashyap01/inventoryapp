@@ -3,4 +3,39 @@
   <groupId>com.inventory</groupId>
   <artifactId>inventoryapp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.2.RELEASE</version>
+	</parent>
+
+	<dependencies>
+	
+		 <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>3.3.6</version>
+			<scope>runtime</scope>
+		</dependency>
+		
+	</dependencies>
+
+
+	<!--  Below plugin is required for maven to build package and all -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>	
+	
 </project>
