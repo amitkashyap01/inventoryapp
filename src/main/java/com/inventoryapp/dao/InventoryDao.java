@@ -13,6 +13,7 @@ public class InventoryDao {
 
 	private static Map<Integer, Item> items;
 
+	/*
 	static {
 		items = new HashMap<Integer, Item>();
 		items.put(1, new Item(1, "Bajaj CFL 15W", 112, "CFL"));
@@ -20,7 +21,7 @@ public class InventoryDao {
 		items.put(3, new Item(3, "Bajaj Bulb", 11, "Bulb"));
 	};
 	
-	
+	*/
 	public Collection<Item> getAllItems(){
 		return this.items.values();
 	}

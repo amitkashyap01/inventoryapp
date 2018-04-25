@@ -1,19 +1,53 @@
 package com.inventoryapp.entity;
 
-public class Item {
+import java.io.Serializable;
+import java.sql.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.UpdateTimestamp;
+
+@Entity
+@Table (name="item")
+public class Item implements Serializable{
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int itemid;
+	
 	private String itemName;
+	
 	private float itemPrice;
+	
 	private String itemCategory;
 	
-	public Item(int itemid, String itemName, float itemPrice, String itemCategory) {
+	@UpdateTimestamp
+	private Date itemLastUpdated;
+	
+	public Item(){
+		
+	}
+	
+	public Item(int itemid, String itemName, float itemPrice, String itemCategory, Date itemLastUpdated) {
 		super();
 		this.itemid = itemid;
 		this.itemName = itemName;
 		this.itemPrice = itemPrice;
 		this.itemCategory = itemCategory;
+		this.itemLastUpdated = itemLastUpdated;
 	}
-	
+
+	public Date getItemLastUpdated() {
+		return itemLastUpdated;
+	}
+
+	public void setItemLastUpdated(Date itemLastUpdated) {
+		this.itemLastUpdated = itemLastUpdated;
+	}
+
 	public int getItemid() {
 		return itemid;
 	}
