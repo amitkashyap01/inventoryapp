@@ -1,15 +1,17 @@
 package com.inventoryapp.entity;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.UpdateTimestamp;
+
 
 @Entity
 @Table (name="item")
@@ -24,6 +26,7 @@ public class Item implements Serializable{
 	
 	private String itemCategory;
 	
+	@javax.persistence.Temporal(TemporalType.TIMESTAMP)
 	@UpdateTimestamp
 	private Date itemLastUpdated;
 	
