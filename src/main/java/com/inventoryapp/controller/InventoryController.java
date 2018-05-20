@@ -21,7 +21,7 @@ public class InventoryController {
 	@Autowired
 	private InventoryService inventoryService;
 	
-	@Value("${message: Default Hello}")
+	@Value("${message: Dafault Value}")
 	private String message;
 	
 	@RequestMapping(method = RequestMethod.GET)
