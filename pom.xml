@@ -10,7 +10,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.0.1.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -39,8 +39,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
-		
+
 		<!-- Added below 2 dependencies for Database connectivity -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -54,6 +53,15 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 			<version>1.5.1.RELEASE</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka -->
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-eureka</artifactId>
+		    <version>1.4.4.RELEASE</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<dependencyManagement>
